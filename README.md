@@ -18,7 +18,7 @@ Utlizing
 - Actually Voyage is better so do VOYAGE_API_KEY=
 - https://docs.llamaindex.ai/en/stable/examples/embeddings/voyageai.html 
 - https://www.voyageai.com/ 
-Please install pip install llama-index-embeddings-voyageai
+- Please install pip install llama-index-embeddings-voyageai
 - When you create a Pinecone index, my model has a 768 dimension size.. https://huggingface.co/Drewskidang/bert_base3. Embeddings is more for Legal. If you fine that the model struggles on general query you can try https://huggingface.co/Drewskidang/FEDBGE or just use voyage 
 
 ## Steps to Run
@@ -37,6 +37,7 @@ docker run -p 5010:5001 ghcr.io/nlmatics/nlm-ingestor:latest
 This will pull the latest version of the `nlm-ingestor` and run it, mapping the container's port 5001 to your local port 5010.
 
 ### 2. Running `ingest.py`
+Make a directory for your data 
 
 Before running `ingest.py`, ensure you have created the necessary Pinecone index as required by the script.
 
