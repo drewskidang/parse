@@ -52,7 +52,7 @@ In a separate terminal, you need to export your AI keys and run the model server
 
 ```bash
 export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
-python -m vllm.entrypoints.openai.api_server --model "Drewskidang/Textbook_AWQ_DARKSTAR" --quantization awq --enforce-eager --chat-template=chatml --gpu-memory-utilization .7
+python -m vllm.entrypoints.openai.api_server --model "Drewskidang/AWG_MERGE" --quantization awq --enforce-eager --chat-template=chatml --gpu-memory-utilization .7
 ```
 
 ### 4. Running the Chatbot
@@ -63,8 +63,8 @@ Finally, to run the chatbot application, use the following command:
 chainlit run app.py --port 8081
 ```
 
-This will start the Streamlit application on port 8081.
+This will start the Chainlit application on port 8081.
 
 ## Conclusion
 
-By following these steps, you should have the project up and running. If you encounter any issues, please review the steps to ensure all commands were executed correctly. Also there's no memory, i dont how to config chainlit with llama-index and memory. It doese not working when using pinecone. 
+By following these steps, you should have the project up and running. If you encounter any issues, please review the steps to ensure all commands were executed correctly. Also there's no memory, i dont how to config chainlit with llama-index and memory. It doese not working when using pinecone. I cant english 
