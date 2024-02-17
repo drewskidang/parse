@@ -42,7 +42,7 @@ inference_server_url="http://localhost:8000/v1"
 llm=ChatOpenAI(
         openai_api_key="EMPTY",
         openai_api_base=inference_server_url,
-        model_name="chose_vllm_model",
+        model_name="Drewskidang/AWQ_MERGE",
         max_tokens=512
     )
 

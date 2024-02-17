@@ -43,7 +43,7 @@ inference_server_url="http://localhost:8000/v1"
 llm=VLLMOpenAI(
         openai_api_key="EMPTY",
         openai_api_base=inference_server_url,
-        model_name="Drewskidang/Textbook_AWQ_DARKSTAR",
+        model_name="Drewskidang/AWQ_MERGE",
         max_tokens=512
     )
 Settings.llm=llm
@@ -57,7 +57,7 @@ async def factory():
     llm=VLLMOpenAI(
         openai_api_key="EMPTY",
         openai_api_base=inference_server_url,
-        model_name="Drewskidang/Textbook_AWQ_DARKSTAR",
+        model_name="Drewskidang/AWQ_MERGE",
         max_tokens=512
     )
  
