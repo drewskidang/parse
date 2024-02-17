@@ -1,0 +1,6 @@
+llama-index-vector-stores-pinecone
+llama-index-embeddings-huggingface
+modal
+vllm
+llmsherpa
+nlm-ingestor
