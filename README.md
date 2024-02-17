@@ -53,7 +53,7 @@ In a separate terminal, you need to export your AI keys and run the model server
 
 ```bash
 export OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
-python -m vllm.entrypoints.openai.api_server --model "Drewskidang/AWG_MERGE" --quantization awq --enforce-eager --chat-template=chatml --gpu-memory-utilization .7
+python -m vllm.entrypoints.openai.api_server --model "Drewskidang/Textbook_AWQ_DARKSTAR" --quantization awq --enforce-eager --chat-template=chatml --gpu-memory-utilization .7
 ```
 
 ### 4. Running the Chatbot

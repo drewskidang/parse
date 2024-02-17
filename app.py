@@ -57,7 +57,7 @@ async def factory():
     llm=VLLMOpenAI(
         openai_api_key="EMPTY",
         openai_api_base=inference_server_url,
-        model_name="Drewskidang/AWG_MERGE",
+        model_name="Drewskidang/Textbook_AWQ_DARKSTAR",
         max_tokens=512
     )
  
