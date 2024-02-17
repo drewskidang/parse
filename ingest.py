@@ -11,8 +11,13 @@ from llama_index.vector_stores.pinecone import PineconeVectorStore
 from llama_index.core.node_parser import HierarchicalNodeParser, SentenceSplitter
 from llama_index.core import StorageContext
 from langchain_openai  import ChatOpenAI
-import modal
-api_key = os.environ.get("PINECONE_API_KEY","")
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from a .env file
+load_dotenv()
+
+api_key = os.environ.get("PINECONE_API_KEY", "")
 pc = Pinecone(api_key=api_key)
 pinecone_index = pc.Index("[insert_name]")
 
@@ -66,8 +71,7 @@ def process_pdfs(pdf_directory):
                         data.append(document)
     return data
 
-stub = modal.Stub()
-@stub.function(gpu="A10G")
+
 def convert_nodes(data):
     name_space = 'antitrust'
     vector_store = PineconeVectorStore(pinecone_index=pinecone_index, name_space=name_space)
@@ -78,6 +82,6 @@ def convert_nodes(data):
 
 
 
-pdf_directory = "ANTITRUSTDATA"  # Replace with your actual directory path
+pdf_directory = "Data"  # Replace with your actual directory path
 processed_data = process_pdfs(pdf_directory)  # Call the function once and store its result
 convert_nodes.local(processed_data)  # Pass the result to the second function

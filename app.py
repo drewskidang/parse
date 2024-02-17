@@ -15,18 +15,23 @@ import chainlit as cl
 from llama_index.embeddings.huggingface_optimum import OptimumEmbedding
 from llama_index.core.query_engine import CitationQueryEngine
 embed_model = HuggingFaceEmbedding(model_name="Drewskidang/ANTI_BERT")
-
+import os
+from dotenv import load_dotenv
 from transformers import AutoTokenizer
+from langchain_openai import ChatOpenAI
+
 Settings.tokenzier = AutoTokenizer.from_pretrained(
     "Drewskidang/Textbook_AWQ_DARKSTAR"
 )
-api_key = os.environ.get("PINECONE_API_KEY","")
+# Load environment variables from a .env file
+load_dotenv()
+
+api_key = os.environ.get("PINECONE_API_KEY", "")
 pc = Pinecone(api_key=api_key)
 pinecone_index = pc.Index("legalbert")
 
 pc = Pinecone(api_key=api_key)
 
-from langchain_openai import ChatOpenAI
 
 embed_model =embed_model
 
