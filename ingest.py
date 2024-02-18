@@ -19,7 +19,7 @@ load_dotenv()
 
 api_key = os.environ.get("PINECONE_API_KEY", "")
 pc = Pinecone(api_key=api_key)
-pinecone_index = pc.Index("[insert_name]")
+pinecone_index = pc.Index("replace_with_index")
 
 embed_model = HuggingFaceEmbedding(model_name="Drewskidang/ANTI_BERT")
 

@@ -28,7 +28,7 @@ load_dotenv()
 
 api_key = os.environ.get("PINECONE_API_KEY", "")
 pc = Pinecone(api_key=api_key)
-pinecone_index = pc.Index("legalbert")
+pinecone_index = pc.Index("replace_with_index")
 
 pc = Pinecone(api_key=api_key)
 

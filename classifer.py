@@ -22,7 +22,7 @@ nlp = assemble("config.cfg")
 
 api_key = os.environ.get("PINECONE_API_KEY","")
 pc = Pinecone(api_key=api_key)
-pinecone_index = pc.Index("antitrust")
+pinecone_index = pc.Index("replace_with_index")
 model_name = "voyage-02"
 voyage_api_key = os.environ.get("VOYAGE_API_KEY", "")
 
