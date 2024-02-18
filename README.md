@@ -42,12 +42,14 @@ Make a directory for your data
 Before running `ingest.py`, ensure you have created the necessary Pinecone index as required by the script.
 
 Open a new terminal and navigate to the project directory. Run the following command:
-
+```bash
+python ingest.py
+```
 ### OR Try classifer.py
 Super experimental having a model classify chunks maybe facts that could be relevant to the case rule of law etc, it takes alot longer. Ideally train a llm to better classify on what you want to potential improving embeddings. 
 
 ```bash
-python ingest.py
+python classifer.py
 ```
 
 ### 3. Model Loading
@@ -71,4 +73,4 @@ This will start the Chainlit application on port 8081.
 
 ## Conclusion
 
-By following these steps, you should have the project up and running. If you encounter any issues, please review the steps to ensure all commands were executed correctly. Also there's no memory, i dont how to config chainlit with llama-index and memory. It doese not working when using pinecone. I cant english 
+By following these steps, you should have the project up and running. If you encounter any issues, please review the steps to ensure all commands were executed correctly. Also there's no memory, i dont how to config chainlit with llama-index and memory. 
