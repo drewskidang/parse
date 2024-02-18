@@ -43,6 +43,9 @@ Before running `ingest.py`, ensure you have created the necessary Pinecone index
 
 Open a new terminal and navigate to the project directory. Run the following command:
 
+### OR Try classifer.py
+Super experimental having a model classify chunks maybe facts that could be relevant to the case rule of law etc, it takes alot longer. Ideally train a llm to better classify on what you want to potential improving embeddings. 
+
 ```bash
 python ingest.py
 ```

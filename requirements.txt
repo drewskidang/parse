@@ -5,3 +5,4 @@ modal
 vllm
 llmsherpa
 nlm-ingestor
+spacy-llm
